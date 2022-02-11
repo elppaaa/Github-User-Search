@@ -20,6 +20,7 @@
 		48A332F227B570FD008D0044 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A332F127B570FD008D0044 /* SearchBar.swift */; };
 		48A332FC27B612AC008D0044 /* GithubQueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A332FB27B612AC008D0044 /* GithubQueryBuilder.swift */; };
 		48A332FF27B61865008D0044 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A332FE27B61865008D0044 /* Constraints.swift */; };
+		48A3330227B64BC2008D0044 /* Github-User-Search-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48A3330127B64BC2008D0044 /* Github-User-Search-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		48A332FB27B612AC008D0044 /* GithubQueryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubQueryBuilder.swift; sourceTree = "<group>"; };
 		48A332FD27B61842008D0044 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		48A332FE27B61865008D0044 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
+		48A3330127B64BC2008D0044 /* Github-User-Search-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Github-User-Search-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		483FDEA827B54DFA00447F21 /* Github User Search */ = {
 			isa = PBXGroup;
 			children = (
+				48A3330127B64BC2008D0044 /* Github-User-Search-Info.plist */,
 				483FDEA927B54DFA00447F21 /* Github_User_SearchApp.swift */,
 				483FDEAB27B54DFA00447F21 /* ContentView.swift */,
 				483FDEB727B54E2100447F21 /* ViewModel.swift */,
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				483FDEB127B54DFC00447F21 /* Preview Assets.xcassets in Resources */,
+				48A3330227B64BC2008D0044 /* Github-User-Search-Info.plist in Resources */,
 				483FDEAE27B54DFC00447F21 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
