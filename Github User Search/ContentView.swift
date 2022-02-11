@@ -14,6 +14,7 @@ struct ContentView: View {
 
   // MARK: Lifecycle
 
+
   init(viewModel: ViewModel) {
     self.viewModel = viewModel
   }
@@ -21,25 +22,34 @@ struct ContentView: View {
   // MARK: Internal
 
   var body: some View {
+
     VStack {
       SearchBar(placeHolder: "이름을 입력하세요", text: $viewModel.query)
         .padding(.top)
         .padding(.horizontal, 8)
-      
+
       List {
         ForEach(viewModel.items, id: \.id) { item in
           ResultCell(imageURL: item.avatarURL, name: item.name, repoCount: item.repoCount)
             .onAppear {
               viewModel.needMoreContents(id: item.id)
             }
+            .onTapGesture {
+              viewModel.currentSelected = item
+            }
         }
       }
-      
+
       if viewModel.isLoading {
         ProgressView()
           .background(.clear)
       }
     }
+    .sheet(item: $viewModel.currentSelected, onDismiss: {
+      viewModel.currentSelected = nil
+    }, content: {
+      SafariView(url: $0.profileURL)
+    })
 
   }
 

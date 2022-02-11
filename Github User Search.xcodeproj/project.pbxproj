@@ -21,6 +21,7 @@
 		48A332FC27B612AC008D0044 /* GithubQueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A332FB27B612AC008D0044 /* GithubQueryBuilder.swift */; };
 		48A332FF27B61865008D0044 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A332FE27B61865008D0044 /* Constraints.swift */; };
 		48A3330227B64BC2008D0044 /* Github-User-Search-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48A3330127B64BC2008D0044 /* Github-User-Search-Info.plist */; };
+		48A3330627B64F75008D0044 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A3330527B64F75008D0044 /* SafariView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		48A332FD27B61842008D0044 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		48A332FE27B61865008D0044 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
 		48A3330127B64BC2008D0044 /* Github-User-Search-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Github-User-Search-Info.plist"; sourceTree = SOURCE_ROOT; };
+		48A3330527B64F75008D0044 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				48A3330127B64BC2008D0044 /* Github-User-Search-Info.plist */,
 				483FDEA927B54DFA00447F21 /* Github_User_SearchApp.swift */,
 				483FDEAB27B54DFA00447F21 /* ContentView.swift */,
+				48A3330527B64F75008D0044 /* SafariView.swift */,
 				483FDEB727B54E2100447F21 /* ViewModel.swift */,
 				48A332F127B570FD008D0044 /* SearchBar.swift */,
 				483FDEC127B556FD00447F21 /* ResultCell.swift */,
@@ -174,6 +177,7 @@
 				483FDEAC27B54DFA00447F21 /* ContentView.swift in Sources */,
 				483FDEC227B556FD00447F21 /* ResultCell.swift in Sources */,
 				483FDEBE27B5519400447F21 /* User.swift in Sources */,
+				48A3330627B64F75008D0044 /* SafariView.swift in Sources */,
 				48A332FF27B61865008D0044 /* Constraints.swift in Sources */,
 				483FDEC027B551C900447F21 /* GithubService.swift in Sources */,
 				48A332F227B570FD008D0044 /* SearchBar.swift in Sources */,

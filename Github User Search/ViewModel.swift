@@ -31,11 +31,13 @@ final class ViewModel: ObservableObject {
   @Published private(set) var isLoading = false
   @Published private(set) var items: [User] = []
   @Published var query: String = ""
+  @Published var currentSelected: User? = nil
 
   func searchUsers() {
     pageNum = 1
+    totalCount = nil
     items = []
-    
+
     if query.count > 0 {
       isLoading = true
       request()
@@ -72,7 +74,15 @@ final class ViewModel: ObservableObject {
     Task(priority: .userInitiated) {
       defer { Task { await self.changeLoadingState(false) } }
 
+      if
+        let totalCount = totalCount,
+        (pageNum * perPage) > totalCount
+      {
+        return
+      }
+
       guard let searchResult = try? await GithubService.searchUser(query: query, perPage: perPage, pageNum: pageNum) else { return }
+      totalCount = searchResult.totalCount
       for item in searchResult.items {
         let num = try? await GithubService.userInfo(userName: item.login).publicRepos
         self.items.append(User(id: item.id, name: item.login, avatarURL: item.avatarURL, repoCount: num))
